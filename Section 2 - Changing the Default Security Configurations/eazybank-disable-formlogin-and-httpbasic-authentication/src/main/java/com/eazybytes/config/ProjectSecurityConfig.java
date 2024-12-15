@@ -15,6 +15,11 @@ public class ProjectSecurityConfig {
         /**
          *  Below is the custom security configurations
          */
+
+        /**
+         * .formLogin(flc -> flc.disable())
+         * .httpBasic(hbc -> hbc.disable())
+         */
         /* */
         http.authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/myAccount","/myBalance","/myLoans","/myCards").authenticated()

@@ -40,6 +40,7 @@ public class ProjectSecurityConfig {
      *
      */
 
+    // THEY ARE WORKS, WE DO NOT NEED WRITE {noop}
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
 

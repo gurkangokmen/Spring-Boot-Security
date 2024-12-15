@@ -58,7 +58,7 @@ We see login popup. (http://localhost:8080/myAccount)
 
 
 ```
-Scenario 1: 
+Scenario 2: 
 -----------------------------------------------------------------------------------------------------------------------
 ProjectSecurityConfig.java:
 http.authorizeHttpRequests((requests) -> requests

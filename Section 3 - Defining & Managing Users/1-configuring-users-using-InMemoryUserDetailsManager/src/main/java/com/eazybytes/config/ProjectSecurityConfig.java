@@ -33,7 +33,11 @@ public class ProjectSecurityConfig {
     public UserDetailsService userDetailsService() {
         // WE NEED TO USE {noop} TO TELL SPRING SECURITY THAT THE PASSWORD IS NOT ENCODED
         // OTHERWISE WE WILL GET AN EXCEPTION
+
+        // ❌
         UserDetails user = User.withUsername("user").password("12345").authorities("read").build();
+
+        // ✔️
         UserDetails admin = User.withUsername("admin").password("{noop}54321").authorities("admin").build();
         return new InMemoryUserDetailsManager(user, admin);
     }

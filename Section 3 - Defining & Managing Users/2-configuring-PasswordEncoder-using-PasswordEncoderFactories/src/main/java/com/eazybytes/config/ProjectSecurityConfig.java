@@ -39,9 +39,11 @@ public class ProjectSecurityConfig {
     }
 
     // SUPPORTS ALL THE PASSWORD ENCODING FORMATS
+    // If I do not write this code, bcrypt format is still work.
     @Bean
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
+
 
 }
